@@ -1,0 +1,17 @@
+{
+  "name": "playhead",
+  "version": "0.0.1",
+  "description": "The is a simple utility that represents the play pause and stop buttons etc of a running counter\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "build": "rollup ./src/PlayHead.js --file ./dist/PlayHead.js --format es",
+    "testbuild": "rollup ./src/PlayHead.js --file ./dist/PlayHeadCjs.js --format cjs"
+  },
+  "author": "Bilal Tariq",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.45.2",
+    "typescript": "^4.2.4"
+  }
+}
