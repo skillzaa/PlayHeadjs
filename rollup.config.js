@@ -1,7 +1,7 @@
 export default {
-    input: 'src/main.js',
+    input: 'src/Stopwatch.js',
     output: {
-      file: 'dist/playHead.js',
-      format: 'cjs'
+      file: 'dist/Stopwatch.js',
+      format: 'es6'
     }
   };
