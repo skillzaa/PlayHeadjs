@@ -3,7 +3,7 @@ const log = console.log;
 const ph = new Ph();
 ph.play();
 
-test('runningTime > 0 : Just to make sure that runningTime runs on play ', () => {
+test('runningTime > 0 ', () => {
   const runningTime = ph.runningTime();
   //log(runningTime);
     expect(runningTime).toBeGreaterThan(0);
