@@ -5,6 +5,7 @@ declare class PlayHead {
     private oldTime;
     private paused;
     private startTime;
+    /**Duration has to be in seconds */
     constructor(duration?: number, paused?: boolean);
     runningTime(): number;
     play(): void;

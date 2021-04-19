@@ -3,8 +3,9 @@
 */
 // export default class PlayHead {
 class PlayHead {
-    constructor(duration = 100000, paused = true) {
-        this.duration = duration;
+    /**Duration has to be in seconds */
+    constructor(duration = 100, paused = true) {
+        this.duration = duration * 1000; //convert it into milisecond 
         this.oldTime = 0;
         this.paused = paused;
         this.startTime = 0;
@@ -12,23 +13,23 @@ class PlayHead {
     runningTime() {
         if (this.paused === false) {
             const t = (Date.now() - this.startTime);
-            return Number((t / 1000).toFixed(2));
+            return Number((t));
         }
         else {
-            return this.oldTime / 1000;
+            return Number(this.oldTime);
         }
     }
     play() {
         if (this.paused === true) { //pause cant be repeated w/o stop
-            this.startTime = (Date.now() - this.oldTime);
+            this.startTime = (Date.now() - this.oldTime); //if its first time then oldTime=0
             this.oldTime = 0;
             this.paused = false;
         }
     }
     pause() {
-        if (this.paused === false) { // so playinh now will pause
-            this.oldTime = Date.now() - this.startTime; //store time
-            this.startTime = 0;
+        if (this.paused === false) { // so playing prev and now will pause
+            this.oldTime = Date.now() - this.startTime; //store time already ran
+            this.startTime = 0; //we need reset since now the old startTime does not matter
             this.paused = true;
         }
     }
@@ -41,11 +42,11 @@ class PlayHead {
         this.play();
     }
     forward(ms = 5000) {
-        let oldPause = false;
+        let oldPause = false; //save the paused status
         if (this.paused === true) {
             oldPause = true;
         }
-        this.pause();
+        this.pause(); // just to make sure that the transaction goes well
         if (this.oldTime + ms < this.duration) {
             this.oldTime = this.oldTime + ms;
         }
