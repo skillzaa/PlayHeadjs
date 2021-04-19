@@ -1,7 +1,8 @@
 "use strict";
 /**This Object can have 2 states wrt time. One is running state and other paused. both cases are to be dealt with seperately. during running state the time is calculated by the difference between time now and a start time variable. on the other hand during pause state the time is placed inside oldTime variable and can be managed from there. when resumed this oldtime is subtracted from the startTime (this oldTime is the time which the animation has already run previously thus to resume  we need to subtract it). similarly while forward and rewind also we have to treat running states and paused state seperately.
 */
-export default class PlayHead {
+// export default class PlayHead {
+class PlayHead {
     /**Duration has to be in seconds */
     constructor(duration = 100, paused = true) {
         this.duration = duration * 1000; //convert it into milisecond 
@@ -67,4 +68,4 @@ export default class PlayHead {
         }
     }
 }
-//module.exports = PlayHead;
+module.exports = PlayHead;
