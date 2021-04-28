@@ -1,13 +1,13 @@
 
 import { rollup } from "rollup";
 //import { uglify } from "rollup-plugin-uglify";
-import { terser } from 'rollup-plugin-terser';
+//import { terser } from 'rollup-plugin-terser';
 
 export default {
     input: 'src/PlayHead.js',
-    plugins: [terser()],
+ //   plugins: [terser()],
     output: {
-      file: 'dist/PlayHead.ver.1.0.0.js',
-      format: 'es'
+      file: 'dist/PlayHead.1.0.0CJS.js',
+      format: 'cjs'
     }
   };

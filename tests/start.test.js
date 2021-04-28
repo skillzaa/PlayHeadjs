@@ -1,4 +1,4 @@
-const Ph = require("../src/PlayHeadCJS");
+const Ph = require("../dist/PlayHead.ver.1.0.0.CJS");
 const log = console.log;
 const ph = new Ph();
 ph.play();
