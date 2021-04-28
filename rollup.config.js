@@ -7,7 +7,7 @@ export default {
     input: 'src/PlayHead.js',
  //   plugins: [terser()],
     output: {
-      file: 'dist/PlayHead.1.0.0CJS.js',
+      file: 'dist/index.js',
       format: 'cjs'
     }
   };

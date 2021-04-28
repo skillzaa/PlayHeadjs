@@ -1,8 +1,8 @@
 {
   "name": "playhead99",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The is a simple utility that represents the play pause and stop buttons of a running counter",
-  "main": "src/PlayHead.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "dist": "rollup -c"
